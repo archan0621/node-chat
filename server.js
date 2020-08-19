@@ -10,8 +10,7 @@ var io = require('socket.io')(http);    //1
 
 app.get('/',function(req, res){  //2
   res.sendFile(__dirname + '/client.html');
-});
-
+})
 var count=1;
 io.on('connection', function(socket){ //3
   console.log('user connected: ', socket.id);  //3-1
